@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import MetricUnit from './components/MetricUnit'
+import UsUnit from './components/UsUnit'
+import BmiResult from './components/BmiResult'
+import { useState } from 'react'
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [bmiResult, setBmiResult] = useState()
+    return (
+        <div>
+            <MetricUnit setBmiResult={setBmiResult} />
+            <UsUnit setBmiResult={setBmiResult} />
+            <BmiResult bmiResult={bmiResult} />
+        </div>
+    )
 }
 
-export default App;
+export default App

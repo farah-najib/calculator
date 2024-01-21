@@ -1,0 +1,55 @@
+.fil1 {
+    fill: none;
+}
+.fil0 {
+    fill: url(#id0);
+}
+
+/* Style the meter */
+#guage {
+    position: relative;
+    margin: auto;
+    margin-bottom: -150px;
+    border-radius: 100%;
+    width: 300px;
+    height: 300px;
+    max-width: 300px;
+    max-height: 300px;
+}
+#guage svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+#guage .value {
+    font-size: 20px;
+    position: relative;
+    top: 100px;
+    text-align: center;
+}
+#spinner {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    transition: transform 1.5s ease-in-out;
+    transform: rotate(45deg);
+}
+#pointer {
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-right: 12px solid red;
+    position: absolute;
+    z-index: 20;
+    top: 105px;
+    left: 5px;
+    width: 0px;
+}
+#guage .small-text {
+    font-size: 14px;
+    position: relative;
+    text-align: center;
+    top: 95px;
+}
