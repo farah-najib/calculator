@@ -21,12 +21,11 @@ function BmiCalculator() {
                             activeKey={key}
                             onSelect={(k) => setKey(k)}
                         >
-                            <Tab eventKey="tab1" title="Tab 1">
+                            <Tab eventKey="tab1" title="Metric Unit">
                                 <MetricUnit setBmiResult={setBmiResult} />
                             </Tab>
-                            <Tab eventKey="tab2" title="Tab 2">
-                                {' '}
-                                <UsUnit setBmiResult={setBmiResult} />{' '}
+                            <Tab eventKey="tab2" title="US Unit">
+                                <UsUnit setBmiResult={setBmiResult} />
                             </Tab>
                         </Tabs>
                     </Col>

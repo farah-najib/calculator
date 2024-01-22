@@ -18,7 +18,7 @@ function App() {
                             height="30"
                             className="d-inline-block align-top"
                         />{' '}
-                        MyCalculater
+                        BMI Calculater
                     </Navbar.Brand>
                 </Container>
             </Navbar>
