@@ -1,29 +1,28 @@
 import './App.css'
-import MetricUnit from './components/MetricUnit'
-import UsUnit from './components/UsUnit'
-import BmiResult from './components/BmiResult'
-import { useState } from 'react'
-import { Tabs, Tab } from 'react-bootstrap'
+
+import Container from 'react-bootstrap/Container'
+
+import Navbar from 'react-bootstrap/Navbar'
+import BmiCalculator from './components/BmiCalculator'
 
 function App() {
-    const [bmiResult, setBmiResult] = useState()
-    const [key, setKey] = useState('tab1')
     return (
         <div>
-            <Tabs
-                id="controlled-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k)}
-            >
-                <Tab eventKey="tab1" title="Tab 1">
-                    <MetricUnit setBmiResult={setBmiResult} />
-                </Tab>
-                <Tab eventKey="tab2" title="Tab 2">
-                    {' '}
-                    <UsUnit setBmiResult={setBmiResult} />{' '}
-                </Tab>
-            </Tabs>
-            <BmiResult bmiResult={bmiResult} />
+            <Navbar className="bg-body-tertiary">
+                <Container>
+                    <Navbar.Brand href="#home">
+                        <img
+                            alt=""
+                            src="/img/logo.svg"
+                            width="30"
+                            height="30"
+                            className="d-inline-block align-top"
+                        />{' '}
+                        MyCalculater
+                    </Navbar.Brand>
+                </Container>
+            </Navbar>
+            <BmiCalculator />
         </div>
     )
 }
