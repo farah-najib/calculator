@@ -3,7 +3,6 @@ import Form from 'react-bootstrap/Form'
 import { Button } from 'react-bootstrap'
 import InputGroup from 'react-bootstrap/InputGroup'
 function UsUnit(props) {
-    console.log('component UsUnit')
     const [height, setHeight] = useState()
     const [weight, setWeight] = useState()
     const calculateBmi = () => {
@@ -19,7 +18,7 @@ function UsUnit(props) {
                     type="number"
                     className="form-control"
                     id="value"
-                    placeholder="0"
+                    placeholder="62.99"
                     value={height}
                     onChange={(e) => setHeight(e.target.value)}
                 />
@@ -31,7 +30,7 @@ function UsUnit(props) {
                     type="number"
                     className="form-control"
                     id="value"
-                    placeholder="0"
+                    placeholder="132.28"
                     value={weight}
                     onChange={(e) => setWeight(e.target.value)}
                 />{' '}
