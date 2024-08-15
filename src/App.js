@@ -3,6 +3,7 @@ import './App.css'
 import Container from 'react-bootstrap/Container'
 
 import Navbar from 'react-bootstrap/Navbar'
+import GitHubCorner from 'react-github-corner'; // Import GitHubCorner
 import BmiCalculator from './components/BmiCalculator'
 
 function App() {
@@ -20,9 +21,16 @@ function App() {
                         />{' '}
                         BMI Calculater
                     </Navbar.Brand>
+
                 </Container>
             </Navbar>
+
             <BmiCalculator />
+            <GitHubCorner href="https://github.com/farah-najib/calculator"
+            bannerColor="#ff0000"  // Background color of the ribbon
+            octoColor="#fff"        // Color of the octocat
+            size={80}               // Size of the ribbon
+            direction="right" />
         </div>
     )
 }
